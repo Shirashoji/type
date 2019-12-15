@@ -1,4 +1,3 @@
-@@ -0,0 +1,61 @@
 import pyautogui
 import time
 from selenium import webdriver
