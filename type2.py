@@ -53,5 +53,4 @@ driver.find_element_by_tag_name("body").send_keys(Keys.SPACE)
 time.sleep(3)
 
 while True:
-    typetext = driver.find_element_by_id('remaining').text #上に表示される文字
-    driver.find_element_by_tag_name("body").send_keys(typetext)
+    driver.find_element_by_tag_name("body").send_keys(driver.find_element_by_id('remaining').text)
