@@ -28,30 +28,29 @@ driver.get(website)
 
 driver.maximize_window()
 
-if(driver.current_url==website):
-    #スタートってとこ
-    driver.find_element_by_id('goSettingButton').click()
+#スタートってとこ
+driver.find_element_by_id('goSettingButton').click()
 
-    #3分のところを押す(他の分数は座標のためなし)
-    driver.find_element_by_id('timeLimitProgress').click()
-    #3回左キー 1分のとこ
-    for i in range(3):
-        pyautogui.hotkey('left')
-    for i in range(type_time):
-        pyautogui.hotkey('right')
+#3分のところを押す(他の分数は座標のためなし)
+driver.find_element_by_id('timeLimitProgress').click()
+#3回左キー 1分のとこ
+for i in range(3):
+    pyautogui.hotkey('left')
+for i in range(type_time):
+    pyautogui.hotkey('right')
 
-    #タイピングを開始する
-    driver.find_element_by_class_name('typingButton').click()
+#タイピングを開始する
+driver.find_element_by_class_name('typingButton').click()
 
-    #見やすくするだけ
-    time.sleep(0.5)
+#見やすくするだけ
+time.sleep(0.5)
 
-    #"space"キーでスタート
-    pyautogui.hotkey('space')
+#"space"キーでスタート
+pyautogui.hotkey('space')
 
-    #3秒後にスタート
-    time.sleep(3)
+#3秒後にスタート
+time.sleep(3)
 
-    while True:
-        typetext = driver.find_element_by_id('remaining').text #上に表示される文字
-        pyautogui.typewrite(typetext) #PyAutoGUIによる入力
+while True:
+    typetext = driver.find_element_by_id('remaining').text #上に表示される文字
+    pyautogui.typewrite(typetext) #PyAutoGUIによる入力
