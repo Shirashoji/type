@@ -49,7 +49,7 @@ time.sleep(0.5)
 #"space"キーでスタート
 driver.find_element_by_tag_name("body").send_keys(Keys.SPACE)
 
-#3秒後にスタート
+#3秒後にスタート(3 2 1)
 time.sleep(3)
 
 while True:
