@@ -22,8 +22,8 @@ driver.maximize_window()
 
 
 time.sleep(5)
-driver.find_element_by_id("mail").send_keys("メールアドレス") #各自変更
-driver.find_element_by_id("password").send_keys("パスワード") #各自変更
+driver.find_element_by_id("mail").send_keys("example@example.com") #各自変更
+driver.find_element_by_id("password").send_keys("example_password") #各自変更
 driver.find_element_by_id("login_btn").click()
 
 driver.find_element_by_xpath('//*[@id="level_check_member"]/a').click()
@@ -35,6 +35,6 @@ pyautogui.hotkey('space')
 time.sleep(3)
 
 for i in range(0, 15):
-    time.sleep(1.3)
-    WebDriverWait(driver, WAIT_SECOND).until(EC.presence_of_element_located((By.XPATH, '//*[@id="sentenceText"]/div/span[2]')))
+    time.sleep(WAIT_SECOND)
+    WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.XPATH, '//*[@id="sentenceText"]/div/span[2]')))
     driver.find_element_by_tag_name("body").send_keys(driver.find_element_by_xpath('//*[@id="sentenceText"]/div/span[2]').text)

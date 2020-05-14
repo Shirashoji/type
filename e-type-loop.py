@@ -27,8 +27,8 @@ while True:
 
 
         time.sleep(5)
-        driver.find_element_by_id("mail").send_keys("メールアドレス") #各自変更
-        driver.find_element_by_id("password").send_keys("パスワード") #各自変更
+        driver.find_element_by_id("mail").send_keys("example@example.com") #各自変更
+        driver.find_element_by_id("password").send_keys("example_password") #各自変更
         driver.find_element_by_id("login_btn").click()
 
         driver.find_element_by_xpath('//*[@id="level_check_member"]/a').click()
