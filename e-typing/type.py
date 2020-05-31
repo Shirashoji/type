@@ -47,7 +47,7 @@ def create_account():
     Mail_address = ''.join([random.choice(string.ascii_letters + string.digits) for i in range(4)])+"_@gmail.com" #自動生成
     Mail_password = ''.join([random.choice(string.ascii_letters + string.digits) for i in range(15)]) #自動生成
     WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, 'name')))
-    driver.find_element_by_id("name").send_keys("青春なんていらないわ")
+    driver.find_element_by_id("name").send_keys("aaa")
     WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, 'email')))
     driver.find_element_by_id("email").send_keys(Mail_address)
     WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, 'email_re')))
@@ -55,7 +55,7 @@ def create_account():
     WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, 'su_password')))
     driver.find_element_by_id("su_password").send_keys(Mail_password)
     WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, 'target')))
-    driver.find_element_by_id("target").send_keys("三月のファンタシア")
+    driver.find_element_by_id("target").send_keys("aaa")
     driver.execute_script("document.getElementById('regist_btn').scrollIntoView()")
     time.sleep(3)
     WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, 'regist_btn')))

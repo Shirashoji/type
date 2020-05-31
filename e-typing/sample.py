@@ -2,7 +2,7 @@ import type, time
 
 
 type.browser_setting('firefox')
-type.login('メール@gmail.comとか',"pass")
+type.create_account()
 wait_time = 0.09
 type.typing_first(WAIT_SECOND = wait_time, ranking='on')
 for _ in range(80):
