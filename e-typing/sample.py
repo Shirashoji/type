@@ -2,7 +2,7 @@ import type, time
 
 
 type.browser_setting('tor')
-type.create_account_with_mail(Mail_address="keroro-gunso@fanclub.pm",User_Name="wwwwwwwww")
+type.create_account_with_mail(Mail_address="www@asffnfafa.cadcdscaf",User_Name="wwwwwwwww")
 #type.login('めあど',"pass")
 wait_time = 0.08
 #type.typing_first(WAIT_SECOND = wait_time, ranking='on')
