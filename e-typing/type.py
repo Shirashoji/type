@@ -78,7 +78,7 @@ def create_account_with_mail(Mail_address, Mail_password="pass",User_Name="NAMEL
     WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.ID, 'su_password')))
     driver.find_element_by_id("su_password").send_keys(Mail_password)
     WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.ID, 'target')))
-    driver.find_element_by_id("target").send_keys("tutsu☆jiji")
+    driver.find_element_by_id("target").send_keys("unknown user")
     driver.execute_script("document.getElementById('regist_btn').scrollIntoView()")
     time.sleep(3)
     WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.ID, 'regist_btn')))
