@@ -14,3 +14,6 @@
 * pyautogui
 * selenium
 * [chromedriver-binary](https://pypi.org/project/chromedriver-binary/)
+
+## デモ動画は以下のリンクから見ることができます。
+https://youtu.be/pzzVvPRKd_E
