@@ -30,10 +30,12 @@ driver.get(website)
 
 driver.maximize_window()
 
+time.sleep(3)
+
 #スタートってとこを押す
 driver.find_element_by_id('goSettingButton').click()
 
-#3分のところを押す(他の分数は座標のためなし)
+#3分のところを押す(他の時間は座標のみのためなし)
 driver.find_element_by_id('timeLimitProgress').click()
 
 #3回左キー 1分のとこ
