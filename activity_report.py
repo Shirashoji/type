@@ -13,7 +13,7 @@ driver.get("https://manabi.benesse.ne.jp/gakushu/typing/eigonyuryoku.html")  #�
 pyautogui.hotkey('command', 'ctrl', 'f')  #Chromeの大画面化
 driver.find_element_by_id('goSettingButton').click()  #「スタート」を押す
 
-#タイピング練習時間を1分に設定する。
+#タイピング練習時間のスライダーを1分に設定する。
 driver.find_element_by_id('timeLimitProgress').click()  #3分のところを押す(他の分は押せないため)。
 for _ in range(2): #2回繰り返す。
     pyautogui.hotkey('left')  # 左キーを押す。
