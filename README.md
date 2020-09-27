@@ -17,3 +17,11 @@
 
 ## デモ動画は以下のリンクから見ることができます。
 https://youtu.be/pzzVvPRKd_E
+
+# gdg.py
+
+[ベネッセのタイピングサイト](https://manabi.benesse.ne.jp/gakushu/typing/)にて自動タイピングを行う。
+
+
+このプログラムは全てPythonで作られております。
+尚、GDGの際に発表したものはこちらとなっております。
