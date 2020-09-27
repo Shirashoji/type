@@ -23,7 +23,7 @@ else:
 chrome_options = webdriver.ChromeOptions();
 chrome_options.add_experimental_option("excludeSwitches", ['enable-automation']);
 driver = webdriver.Chrome(options=chrome_options);
-#driver = webdriver.Chrome('/Users/rockmankun/Selenium/chromedriver')
+
 driver.get(website)
 
 driver.maximize_window()
