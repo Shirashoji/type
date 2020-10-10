@@ -1,6 +1,4 @@
-#bennese-type.pyです。
-#ベネッセのタイピングサイトで動作します。
-
+#モジュール
 import pyautogui
 import time
 from selenium import webdriver
@@ -9,12 +7,13 @@ from selenium.webdriver.chrome.options import Options
 import chromedriver_binary
 
 
-print('サイトを選択してください\n1: 英語入力\n2: ホームポジション\n3: 日本語入力')
+#モードと時間を選択
+print('モードを選択してください\n1: 英語入力\n2: ホームポジション\n3: 日本語入力')
 category = int(input('番号を入力してください: '))
 print('時間は1~5分です.')
 type_time = int(input('時間を入力してください(単位は分): ')) -1
 
-#サイト
+#サイト（モード）を入力を元に選択
 if category == 1:
     website = 'https://manabi.benesse.ne.jp/gakushu/typing/eigonyuryoku.html'
 elif category == 2:
@@ -22,9 +21,10 @@ elif category == 2:
 elif category == 3:
     website = 'https://manabi.benesse.ne.jp/gakushu/typing/nihongonyuryoku.html'
 else:
-    print('1,2,3から選択してください。')
     website = 'https://manabi.benesse.ne.jp/gakushu/typing/eigonyuryoku.html'
 
+
+#Chromeの設定・起動
 chrome_options = webdriver.ChromeOptions();
 chrome_options.add_experimental_option("excludeSwitches", ['enable-automation']);
 driver = webdriver.Chrome(options=chrome_options);
@@ -32,14 +32,16 @@ driver.get(website)
 
 driver.maximize_window()
 
-#スタートってとこ
+#「スタート」を押す
 driver.find_element_by_id('goSettingButton').click()
 
-#3分のところを押す(他の時間は座標のためなし)
+#3分のところを押す(他の分は座標のためなし)
 driver.find_element_by_id('timeLimitProgress').click()
-#3回左キー 1分のとこ
-for i in range(3):
+#2回左キー 1分のとこ
+for i in range(2):
     pyautogui.hotkey('left')
+
+#質問した時間に移動（入力された時間から-1に移動）
 for i in range(type_time):
     pyautogui.hotkey('right')
 
@@ -55,5 +57,7 @@ driver.find_element_by_tag_name("body").send_keys(Keys.SPACE)
 #3秒後にスタート(3 2 1)
 time.sleep(3)
 
+#繰り返し
 while True:
     driver.find_element_by_tag_name("body").send_keys(driver.find_element_by_id('remaining').text)
+    #要素（remaining）の取得と入力（body）
