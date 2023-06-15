@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-
+import chromedriver_binary
 
 
 print('サイトを選択してください\n1: 英語入力\n2: ホームポジション\n3: 日本語入力')
